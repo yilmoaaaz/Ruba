@@ -1,0 +1,421 @@
+<html><head><base href=".">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the website of Ruba">
+    <meta name="keyword" content="Ruba website">
+    <meta name="keyword" content="Ruba ">
+    <meta name="keyword" content="ربى">
+    <meta name="keyword" content="موقع ربى">
+    
+    <title>Ruba's Cosmic Code Adventure</title>
+    <link rel="icon" href="4.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #003366;
+            --accent-color: #00aaff;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --gradient-1: linear-gradient(45deg, #000000, #003366, #0066cc);
+            --gradient-2: linear-gradient(45deg, #000000, #0066cc);
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+        
+        header {
+            background: var(--gradient-1);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🚀</text></svg>') no-repeat center center / 50px 50px;
+            opacity: 0.1;
+            animation: rocketFloat 20s linear infinite;
+        }
+        
+        @keyframes rocketFloat {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        
+        nav ul li a:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .content {
+            background-color: #111111;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 102, 204, 0.2);
+            margin: 40px 0;
+            padding: 40px;
+            transition: transform 0.3s ease;
+        }
+        
+        .content:hover {
+            transform: translateY(-5px);
+        }
+        
+        h1, h2, h3 {
+            color: var(--accent-color);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .skill-card {
+            background: var(--gradient-2);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px) rotate(3deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skill-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .certificate {
+            background: var(--gradient-1);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .certificate:hover {
+            transform: scale(1.02);
+        }
+        
+        .certificate img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        
+        .certificate-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .certificate::after {
+            content: "🏆";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            font-size: 100px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+            animation: floatTrophy 3s ease-in-out infinite;
+        }
+        
+        @keyframes floatTrophy {
+            0%, 100% { transform: rotate(-15deg) translateY(0); }
+            50% { transform: rotate(-10deg) translateY(-10px); }
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        img:hover {
+            transform: scale(1.05);
+        }
+        
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .learning-item {
+            background: var(--gradient-2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .learning-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .learning-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .learning-item h3 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .learning-item p {
+            color: var(--text-color);
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 20px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .content {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
+            .skill-card, .learning-item {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .skills-grid, .learning-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #000000, #003366, #0066cc, #00aaff);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/3c0a8d3dd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <header>
+        <div class="container">
+            <h1>Ruba's Cosmic Code Adventure</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home Base</a></li>
+                <li><a href="#skills">Super Skills</a></li>
+                <li><a href="#certificates">Stellar Certificates</a></li>
+                <li><a href="#gallery">What I've Learned</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section id="home" class="content">
+            <h2>Welcome to My Intergalactic Code Station!</h2>
+            <img src="4.jpg" alt="A young girl with dark hair and bangs, wearing a black t-shirt with planets on it, smiling at the camera" width="300" height="400">
+            <p>Greetings, fellow space explorers! I'm Ruba, a sixth-grade student and aspiring cosmic coder. When I'm not decoding the mysteries of the universe in my classes, you can find me programming my way through the galaxies of technology!</p>
+            <p>Buckle up and join me on this stellar journey as we navigate through the constellations of code and uncover the wonders of the digital cosmos!</p>
+        </section>
+        
+        <section id="skills" class="content">
+            <h2>My Supernova Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>mBlock Mastermind</h3>
+                    <p>Crafting interactive animations and games that are out of this world!</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python Prodigy</h3>
+                    <p>Scripting solutions faster than light speed!</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3>Pictoblocks Pioneer</h3>
+                    <p>Designing visual programs that paint the cosmos!</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>Blocks Virtuoso</h3>
+                    <p>Building educational programs block by celestial block!</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="certificates" class="content">
+            <h2>My Cosmic Achievements</h2>
+            <div class="certificate">
+                <img src="WhatsApp Image 2024-10-22 at 7.00.42 PM.jpeg" alt="iSchool Advanced Programming Course Certificate" width="100%" height="auto">
+                <div class="certificate-info">
+                    <h3>🌟 iSchool Intergalactic Certificate of Excellence 🌟</h3>
+                    <p>Awarded for outstanding performance in the iSchool Advanced Programming Course</p>
+                    <p><strong>Stardate:</strong> Tuesday, October 20, 2024</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="gallery" class="content">
+            <h2>What I've Learned in My Coding Odyssey</h2>
+            <div class="learning-grid">
+                <div class="learning-item">
+                    <img src="block-based-programming.jpg" alt="Block-based programming interface" width="400" height="300">
+                    <h3>Block-Based Programming</h3>
+                    <p>I've mastered the art of creating programs using drag-and-drop blocks, which has given me a strong foundation in logical thinking and algorithm design.</p>
+                </div>
+                <div class="learning-item">
+                    <img src="Python-Symbol.png" alt="Python programming language logo" width="400" height="300">
+                    <h3>Python Programming</h3>
+                    <p>I've delved into the world of Python, learning about variables, loops, conditionals, and even some basic data structures.</p>
+                </div>
+                <div class="learning-item">
+                    <img src="images (2).png" alt="Python symbol" width="400" height="300">
+                    <h3>Advanced Python Concepts</h3>
+                    <p>As I've progressed, I've started exploring more advanced Python concepts, including object-oriented programming and working with libraries.</p>
+                </div>
+                <div class="learning-item">
+                    <img src="images (3).png" alt="Code editor interface" width="400" height="300">
+                    <h3>Coding Environments</h3>
+                    <p>I've become familiar with various coding environments and tools, enhancing my ability to write, test, and debug code efficiently.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const skillCards = document.querySelectorAll('.skill-card');
+        skillCards.forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = `translateY(-10px) rotate(${Math.random() * 10 - 5}deg)`;
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.transform = 'translateY(0) rotate(0)';
+            });
+        });
+    </script>
+</body>
+</html>
